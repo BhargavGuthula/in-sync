@@ -1,12 +1,30 @@
+:root{
+--color-primary: #00C48C;
+--color-accent: #00E5A0;
+--color-deep: #00897B;
+--color-pop: #FFE14D;
+--color-bg: #0D1F1A;
+--color-surface: #1A3330;
+--color-white: #FFFFFF;
+}
 h1 {
   font-size: 4rem;
+  color: var(--color-pop);
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; 
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
+  background: var(--color-bg);
   z-index: 0;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }

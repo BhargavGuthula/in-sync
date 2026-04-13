@@ -1,16 +1,16 @@
 .login-modal {
-  min-width: 100px;
+  max-width: 30vw;
   padding: 70px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--color-deep);
   border-radius: 15px;
-  background: #ffffff;
+  background: var(--color-bg);
+  color: var(--color-white);
   z-index: 100;
-  position: absolute;
+  position: relative;
   
 }
 
 .login-modal h2 {
-  margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -27,14 +27,16 @@
   width: 100%;
   min-height: 44px;
   padding: 10px 12px;
-  border: 1px solid #b8b8b8;
+  border: 1px solid var(--color-deep);
   border-radius: 6px;
   font: inherit;
+  background: var(--color-surface);
+  color: var(--color-white);
 }
 
 .login-modal input:focus {
-  border-color: #111111;
-  outline: 2px solid #111111;
+  border-color: var(--color-pop);
+  outline: 2px solid var(--color-pop);
   outline-offset: 2px;
 }
 
@@ -43,19 +45,38 @@
   margin-top: 8px;
   border: 0;
   border-radius: 6px;
-  background:#34495E;
-  color: #ffffff;
+  background: var(--color-surface);
+  color: var(--color-white);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
+
+.login-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.login-modal .close-button:hover {
+  background-color: transparent;
+  color: var(--color-pop);
+}
 .login-modal p{
     margin-top: 12px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
     text-align: center;
 }
 .login-modal button:hover {
-  background: #333333;
+  background: var(--color-pop);
+  color: var(--color-surface);
+}
+
+.login-modal .accent {
+  font-family: Playwrite IE, cursive;
 }

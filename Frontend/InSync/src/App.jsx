@@ -1,12 +1,16 @@
 import './App.css'
 import LoginModal from './components/auth/LoginModal.jsx'
 import { useState } from 'react'
+import Navbar from "./components/Navbar.jsx";
 function App() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(true)
   return (
     <main>
-      <h1>InSync</h1>
-      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
+      <Navbar />
+      <section className="app-content">
+        {isLoginModalOpen && 
+        <LoginModal  onClose={() => setIsLoginModalOpen(prev => !prev)} />}
+      </section>
     </main>
   )
 }
