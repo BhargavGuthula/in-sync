@@ -5,14 +5,15 @@ import Navbar from "./components/small/Navbar.jsx";
 import AppRoutes from './components/navigation/AppRoutes.jsx';
 import NowPlaying from './components/small/NowPlaying.jsx';
 function App() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  // const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
   return (
+    // {isLoginModalOpen && 
+    //     <LoginModal  onClose={() => setIsLoginModalOpen(prev => !prev)} />}
     <main>
       <Navbar />   
       <section className="app-content">
         <AppRoutes />
-        {isLoginModalOpen && 
-        <LoginModal  onClose={() => setIsLoginModalOpen(prev => !prev)} />}
+        
       </section>
       <NowPlaying />
     </main>
